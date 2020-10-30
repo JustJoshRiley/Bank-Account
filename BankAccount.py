@@ -17,8 +17,8 @@ class BankAccount:
             print('Insufficient funds.')
             self.__balance -= 10
     # balance function 
-    def balance(self, full_name, balance):
-        return print(f'Hi, {self.__full_name} Here is Your Balance: {self.__balance}')
+    def get_balance(self):
+        return print(f'Hi, {self.__full_name} Here is Your Balance: $' '{:.2f}'.format(self.__balance))
     # interest function 
     def add_interest(self):
         interest = self.__balance *  0.00083
@@ -46,14 +46,10 @@ class BankAccount:
             self.withdraw(withdraw_amount)
             self.print_receipt()
 
-
-
-
-
-
 user1 = BankAccount('Joshua', 101010101, 1010010100101, 500)
-user1.deposit(500)
-user1.withdraw(1000.01)
-user1.add_interest()
-user1.print_receipt()
-user1.atm_widthdraw()
+# user1.deposit(500)
+# user1.withdraw(1000.01)
+# user1.add_interest()
+# user1.print_receipt()
+# user1.atm_widthdraw()
+user1.get_balance()
