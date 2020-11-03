@@ -43,7 +43,7 @@ class BankAccount:
             if self.get_user_input("Do you want to check your balance?: Yes or No?"):
                 print(self.__balance)
             withdraw_amount = float(input('How much do you want to withdraw?: '))
-            self.withdraw(withdraw_amount)
+            self.withdraw(withdraw_amount - 3)
             self.print_receipt()
 
 user1 = BankAccount('Joshua', 101010101, 1010010100101, 500)
